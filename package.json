@@ -1,0 +1,88 @@
+{
+  "name": "bot-main-service",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "rm -rf ./dist && tsc && node ./dist/index",
+    "build": "rm -rf ./dist && tsc",
+    "dev": "ts-node-dev ./src/index",
+    "lint": "eslint ./src --ext .ts,.json --cache --fix",
+    "lint-staged": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/anchor": "0.28.1-beta.2",
+    "@orca-so/common-sdk": "^0.3.4",
+    "@orca-so/whirlpools-sdk": "^0.11.5",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/web3.js": "^1.87.0",
+    "@types/bn.js": "^5.1.2",
+    "bn.js": "^5.2.1",
+    "borsh": "^1.0.0",
+    "dayjs": "^1.11.3",
+    "decimal.js": "^10.4.3",
+    "fs-extra": "^10.1.0",
+    "jsbi": "^4.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-jwt": "^4.0.3",
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6",
+    "logger": "^0.0.1",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.3.3",
+    "node-fetch": "2.x",
+    "request": "^2.88.2",
+    "sequelize": "^6.20.1",
+    "yaml": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa2-cors": "^2.0.3",
+    "@types/logger": "0.0.1",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^17.0.42",
+    "@types/node-fetch": "2.x",
+    "@types/request": "^2.48.10",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-testing-library": "^3.9.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.0",
+    "ts-lib": "^0.0.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "eslint --fix -c .eslintrc.js"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "pnpm": ">=7.0.0",
+    "node": ">=16.20.0"
+  }
+}

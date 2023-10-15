@@ -1,0 +1,13 @@
+BASE:
+  Port: 8080
+  Address: "127.0.0.1"
+  MongoURI: ""
+  NODE_ENV: "development or production"
+  JwtSecret: "your_jwt_secret"
+MYSQL:
+  Host: "127.0.0.1"
+  User: "root"
+  Port: "3306"
+  Password: "db_password"
+  DataBase: "db_name"
+  Dialect: "mysql"
